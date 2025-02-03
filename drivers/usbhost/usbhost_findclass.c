@@ -35,6 +35,9 @@
 
 #include "usbhost_registry.h"
 
+#undef uinfo
+#define uinfo printf
+
 /****************************************************************************
  * Private Functions
  ****************************************************************************/
@@ -85,6 +88,7 @@ static bool usbhost_idmatch(const struct usbhost_id_s *classid,
       else
         {
           /* Not vendor specific?  Then we have a match */
+          uinfo("Found 0x%x:0x%x\n", devid->vid, devid->pid);
 
           return true;
         }
