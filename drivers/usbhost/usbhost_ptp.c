@@ -47,8 +47,8 @@
 #include <nuttx/usb/ptp.h>
 #include <nuttx/usb/usbhost_devaddr.h>
 
-#undef uinfo
-#define uinfo       printf
+//#undef uinfo
+//#define uinfo       printf
 
 /* Don't compile if prerequisites are not met */
 
